@@ -234,7 +234,7 @@ Vue.use(VueMenuCascder);
 
 ## 更新日志
 
-**版本：1.0.5**
+**版本：1.0.6**
 Contributor: [@wuyungen1996](<https://github.com/wuyungen1996>)
 
 时间：2021年2月5日

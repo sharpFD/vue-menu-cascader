@@ -1,7 +1,7 @@
 {
   "name": "vue-menu-cascader",
   "description": "a cascader with search and category based on el-cascader",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "console.logman@gmail.com",
   "license": "MIT",
   "private": false,
