@@ -40,7 +40,10 @@ Vue.use(VueMenuCascder);
 ```
 
 CDN引入：
+
+```
 <script src="https://cdn.jsdelivr.net/npm/vue-menu-cascader@1.0.7/dist/vue-menu-cascader.js" type="text/javascript"></script>
+```
 
 
 接下来，你就可以在页面中使用vue-menu-cascader了
