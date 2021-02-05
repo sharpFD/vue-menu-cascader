@@ -37,8 +37,12 @@ Vue.use(VueMenuCascder);
         components:{VueMenuCascder}
     }
 </script>
-
 ```
+
+CDN引入：
+<script src="https://cdn.jsdelivr.net/npm/vue-menu-cascader@1.0.7/dist/vue-menu-cascader.js" type="text/javascript"></script>
+
+
 接下来，你就可以在页面中使用vue-menu-cascader了
 
 ```html
@@ -234,7 +238,7 @@ Vue.use(VueMenuCascder);
 
 ## 更新日志
 
-**版本：1.0.6**
+**版本：1.0.7**
 
 Contributor: [@wuyungen1996](<https://github.com/wuyungen1996>)
 
