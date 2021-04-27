@@ -253,4 +253,16 @@ Contributor: [@wuyungen1996](<https://github.com/wuyungen1996>)
 
 --------
 
+**版本：1.0.8**
+
+Contributor: [@wuyungen1996](<https://github.com/wuyungen1996>)
+
+时间：2021年4月27日
+
+内容：
+
+- bugfix： 修复传入的options默认读取的prop不是value和label时，报错的问题
+
+--------
+
 ​

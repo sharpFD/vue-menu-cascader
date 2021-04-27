@@ -39,7 +39,14 @@ export default {
       return !this.nodes.length || !!this.filterText && !this.reGenerateNode(this.nodes).length;
     },
     menuId() {
+        debugger
       return `cascader-menu-${this.id}-${this.index}`;
+    },
+    useValue() {
+        return this.panel.config.value
+    },
+    useLabel() {
+        return this.panel.config.label
     }
   },
   mounted() {
@@ -128,7 +135,7 @@ export default {
             }
         }, [])
 
-        let filterNode = flatAllNodeList.filter(o=> o.value.toLowerCase().includes(filterText.toLowerCase()) || o.label.toLowerCase().includes(filterText.toLowerCase()))
+        let filterNode = flatAllNodeList.filter(o=> o[this.useValue].toLowerCase().includes(filterText.toLowerCase()) || o.label.toLowerCase().includes(filterText.toLowerCase()))
         filterNode.forEach(node=> {
             if (!!titleAppearMap[node.data.title]){
                 node.data.title = ''
@@ -164,7 +171,7 @@ export default {
               if (!!node.data.title) {
                   return (
                       <div>
-                        <div id={this.menuId + '_' + node.data.value} class="anchor-item" style="display: flex; align-items: center;">
+                        <div id={this.menuId + '_' + node.data[this.useValue]} class="anchor-item" style="display: flex; align-items: center;">
                             <span style="display: inline-block; width: 3px; height: 12px; background: #03c08d;margin-left: 12px"></span>
                             <span style="font-size: 12px;color: #909399;margin-left: 4px;line-height:30px;">{node.data.title}</span>
                             <span style="flex: 1 0 auto; height: 1px; background: #e9f0f7;margin: 0 6px;"></span>
@@ -198,7 +205,7 @@ export default {
               if (!!node.data.title) {
                   return (
                       <div>
-                          <div id={this.menuId + '_' + node.data.value} class="anchor-item" style="display: flex; align-items: center;">
+                          <div id={this.menuId + '_' + node.data[this.useValue]} class="anchor-item" style="display: flex; align-items: center;">
                           <span style="display: inline-block; width: 3px; height: 12px; background: #03c08d;margin-left: 12px"></span>
                           <span style="font-size: 12px;color: #909399;margin-left: 4px;line-height:30px;">{node.data.title}</span>
                           <span style="flex: 1 0 auto; height: 1px; background: #e9f0f7;margin: 0 6px;"></span>
@@ -261,7 +268,7 @@ export default {
            {showTitle && !filterText ?
                <div v-show="showTitle" class="cascader-top-menu">
                {titles.map(item => {
-                       return <div class={{'cascader-tag' : true, 'active': this.active === (this.menuId + '_' + item.data.value)}} on-click={ () => toTarget(item.data.value) }>{item.data.title}</div>
+                       return <div class={{'cascader-tag' : true, 'active': this.active === (this.menuId + '_' + item.data[this.useValue])}} on-click={ () => toTarget(item.data[this.useValue]) }>{item.data.title}</div>
                    })}
                </div>
                : ''
