@@ -1,6 +1,7 @@
 <script>
 import CascaderNode from './CascaderNode.vue';
 import { generateId } from './utils/util';
+import _ from 'lodash'
 
 export default {
   name: 'ElCascaderMenu',
@@ -46,6 +47,7 @@ export default {
         return this.panel.config.value
     },
     useLabel() {
+        console.log('this.panel.config.label',this.panel.config.label);
         return this.panel.config.label
     }
   },
@@ -134,7 +136,6 @@ export default {
                 return p.concat(q)
             }
         }, [])
-
         let filterNode = flatAllNodeList.filter(o=> o[this.useValue].toLowerCase().includes(filterText.toLowerCase()) || o.label.toLowerCase().includes(filterText.toLowerCase()))
         filterNode.forEach(node=> {
             if (!!titleAppearMap[node.data.title]){

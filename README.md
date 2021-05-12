@@ -14,7 +14,27 @@
 ## install 安装
 
 ```shell
+npm i element-ui --save
 npm i vue-menu-cascader --save
+```
+因为用到jsx语法和jsx-v-model语法，需要安装babel插件
+
+```shell
+npm install babel-plugin-jsx-v-model babel-plugin-transform-vue-jsx -D
+```
+
+然后在babelrc中配置
+
+```javascript
+{
+  ...,
+  "plugins": [ // 需要配置以下两个插件
+    "jsx-v-model",
+    "transform-vue-jsx"
+  ]
+}
+
+
 ```
 
 
@@ -23,28 +43,21 @@ npm i vue-menu-cascader --save
 全局使用：在main.js中写入下面的代码
 
 ```javascript
-import VueMenuCascder from "vue-menu-cascder";
-Vue.use(VueMenuCascder);
+import VueMenuCascader from "vue-menu-cascader";
+Vue.use(VueMenuCascader);
 ```
 
 文件中使用：
 
 ```javascript
 <scrpit>
-    import VueMenuCascder from "vue-menu-cascder";
+    import VueMenuCascader from "vue-menu-cascader";
 
     export default{
-        components:{VueMenuCascder}
+        components:{VueMenuCascader}
     }
 </script>
 ```
-
-CDN引入：
-
-```
-<script src="https://cdn.jsdelivr.net/npm/vue-menu-cascader@1.0.7/dist/vue-menu-cascader.js" type="text/javascript"></script>
-```
-
 
 接下来，你就可以在页面中使用vue-menu-cascader了
 
@@ -96,6 +109,7 @@ CDN引入：
                                              {
                                                  "title":"页面",  // 第一个分类
                                                  "label":"页面展示次数"
+                                                 "value": "page_test"
                                              },
                                              {
                                                  "label":"页面UV",
@@ -263,6 +277,15 @@ Contributor: [@wuyungen1996](<https://github.com/wuyungen1996>)
 
 - bugfix： 修复传入的options默认读取的prop不是value和label时，报错的问题
 
+**版本：1.1.9**
+
+Contributor: [@wuyungen1996](<https://github.com/wuyungen1996>)
+
+时间：2021年5月12日
+
+内容：
+
+- bugfix：去除CDN引入模式，更新README
 --------
 
 ​

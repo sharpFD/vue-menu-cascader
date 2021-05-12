@@ -1,7 +1,7 @@
 {
   "name": "vue-menu-cascader",
   "description": "a cascader with search and category based on el-cascader",
-  "version": "1.0.8",
+  "version": "1.1.9",
   "author": "console.logman@gmail.com",
   "license": "MIT",
   "private": false,
@@ -11,6 +11,8 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "element-ui": "^2.15.1",
+    "lodash": "^4.17.21",
     "vue": "^2.5.11"
   },
   "browserslist": [
