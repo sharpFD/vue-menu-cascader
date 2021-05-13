@@ -17,7 +17,7 @@
         </el-button>
       </template>
       <template v-slot:desc="{ scope }">
-        <div>这里是右侧append的描述,{{ scope.node }} {{ scope.data }}</div>
+        <div style="width: 300px;height: 250px;box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);">这里是右侧append的描述, {{ scope.data }}</div>
       </template>
     </vue-menu-cascader>
   </div>
@@ -57,6 +57,7 @@ export default {
             {
               title: "页面", // 第一个分类
               label: "页面展示次数",
+              value: "page_test"
             },
             {
               label: "页面UV",

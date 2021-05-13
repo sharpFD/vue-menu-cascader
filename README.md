@@ -63,19 +63,26 @@ Vue.use(VueMenuCascader);
 
 ```html
 <template>
-    <vue-menu-cascader :options="cascaderOptions" v-model="value"
-             :props="{ expandTrigger: 'hover' , multiple : true , emitPath: false}">
-        <template slot-scope="{ node, data }">
-            <span>{{data.label}}</span>
-        </template>
-        <template v-slot:reference>
-            <el-button icon="el-icon-plus" class="item-container-btn" slot="reference">添加指标
-            </el-button>
-        </template>
-        <template v-slot:desc="{scope}">
-            <div>这里是右侧append的描述,{{scope.node}} {{scope.data}}</div>
-        </template>
-      </vue-menu-cascader>
+    <vue-menu-cascader
+      :options="cascaderOptions"
+      v-model="value"
+      :props="{ expandTrigger: 'hover', multiple: true, emitPath: false }"
+    >
+      <template slot-scope="{ node, data }">
+        <span>{{ data.label }}</span>
+      </template>
+      <template v-slot:reference>
+        <el-button
+          icon="el-icon-plus"
+          class="item-container-btn"
+          slot="reference"
+          >添加指标
+        </el-button>
+      </template>
+      <template v-slot:desc="{ scope }">
+        <div style="width: 300px;height: 250px;box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);">这里是右侧append的描述, {{ scope.data }}</div>
+      </template>
+    </vue-menu-cascader>
 </template>
 <script>
     export default {
@@ -108,7 +115,7 @@ Vue.use(VueMenuCascader);
                                          "children":[
                                              {
                                                  "title":"页面",  // 第一个分类
-                                                 "label":"页面展示次数"
+                                                 "label":"页面展示次数",
                                                  "value": "page_test"
                                              },
                                              {
@@ -257,7 +264,7 @@ Vue.use(VueMenuCascader);
 
 **版本：1.0.7**
 
-Contributor: [@wuyungen1996](<https://github.com/wuyungen1996>)
+Contributor: [@sharpFD](<https://github.com/sharpFD>)
 
 时间：2021年2月5日
 
@@ -269,7 +276,7 @@ Contributor: [@wuyungen1996](<https://github.com/wuyungen1996>)
 
 **版本：1.0.8**
 
-Contributor: [@wuyungen1996](<https://github.com/wuyungen1996>)
+Contributor: [@sharpFD](<https://github.com/sharpFD>)
 
 时间：2021年4月27日
 
@@ -277,15 +284,15 @@ Contributor: [@wuyungen1996](<https://github.com/wuyungen1996>)
 
 - bugfix： 修复传入的options默认读取的prop不是value和label时，报错的问题
 
-**版本：1.1.9**
+**版本：1.2.2**
 
-Contributor: [@wuyungen1996](<https://github.com/wuyungen1996>)
+Contributor: [@sharpFD](<https://github.com/sharpFD>)
 
 时间：2021年5月12日
 
 内容：
 
-- bugfix：去除CDN引入模式，更新README
+- bugfix：修复组件无法搜索问题，加入lodash，更新README
 --------
 
 ​

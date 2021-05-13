@@ -75,7 +75,7 @@
 
       handleMultiCheckChange(checked) {
         this.node.doCheck(checked);
-        //  注意这个地方如果多选传进来的node是clone后的node，需要更新前面的node，最多支持
+        //  注意这个地方如果多选传进来的node是clone后的node，需要更新前面的node
         let getNode = this.getSpecificNode(this.panel.menus[0], 0)
         getNode.doCheck(checked);
         if (!!this.menu.filterText){

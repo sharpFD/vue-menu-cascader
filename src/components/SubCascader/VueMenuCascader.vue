@@ -88,7 +88,7 @@
     };
 
     export default {
-        name: 'ElCascaderPanel',
+        name: 'VueMenuCascader',
 
         components: {
             CascaderMenu
@@ -166,7 +166,9 @@
                     this.checkStrictly && this.calculateCheckedNodePaths();
                     this.$emit('input', val);
                     this.$emit('change', val);
-                    this.show = false
+                    if(!this.multiple) {
+                        this.show = false
+                    }
                 }
             }
         },
