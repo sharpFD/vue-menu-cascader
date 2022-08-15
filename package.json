@@ -1,7 +1,7 @@
 {
   "name": "vue-menu-cascader",
   "description": "a cascader with search and category based on el-cascader",
-  "version": "1.2.2",
+  "version": "1.2.5",
   "author": "console.logman@gmail.com",
   "license": "MIT",
   "private": false,
@@ -28,6 +28,7 @@
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-3": "^6.24.1",
+    "cheerio": "^1.0.0-rc.3",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.4",

@@ -40,7 +40,6 @@ export default {
       return !this.nodes.length || !!this.filterText && !this.reGenerateNode(this.nodes).length;
     },
     menuId() {
-        debugger
       return `cascader-menu-${this.id}-${this.index}`;
     },
     useValue() {
@@ -263,7 +262,7 @@ export default {
     let renderFixedDom = (
         <div class={showTitle && !showSearch ? 'anchor-second-bar' : 'anchor-bar'}>
            {showSearch ?
-               <el-input class="filter-input" v-model={this.filterText} prefix-icon="el-icon-search" placeholder="搜索名称/英文名" size="mini" clearable></el-input>
+               <el-input ref="m-input" class="filter-input" v-model={this.filterText} prefix-icon="el-icon-search" placeholder="搜索名称/英文名" size="mini" clearable></el-input>
                : ''
            }
            {showTitle && !filterText ?

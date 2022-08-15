@@ -293,6 +293,17 @@ Contributor: [@sharpFD](<https://github.com/sharpFD>)
 内容：
 
 - bugfix：修复组件无法搜索问题，加入lodash，更新README
+  
+
+**版本：1.2.2**
+
+Contributor: [@sharpFD](<https://github.com/sharpFD>)
+
+时间：2022年8月15日
+
+内容：
+
+- bugfix：搜索框自动聚焦
 --------
 
 ​
