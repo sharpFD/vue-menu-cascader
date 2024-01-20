@@ -5,7 +5,7 @@
 
 ## preview 效果预览
 
-![vue-menu-cascader](https://s3.ax1x.com/2021/02/05/y8eGcj.gif)
+![vue-menu-cascader](https://i.miji.bid/2024/01/20/ae02c272eff2f017088ce4b94ae34af7.gif)
 
 ## environment 环境
 
